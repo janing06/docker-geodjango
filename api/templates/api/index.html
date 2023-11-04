@@ -30,7 +30,7 @@
                attribution: '© OpenStreetMap'
            }).addTo(map);
           async function fetchBarangay(){
-               const response = await fetch('http://127.0.0.1:8000/api/barangays/')
+               const response = await fetch('https://docker-test-yb57.onrender.com/api/barangays/')
                var data = await response.json()
 
                console.log(data)
