@@ -136,6 +136,7 @@ DATABASES = {
         'PASSWORD': 'DFIRnPvCRUCg6Xt0WNu5i6gCaWVmJFnO',
         'HOST': 'dpg-cl33tt8t3kic73d6ktl0-a.oregon-postgres.render.com',
         'PORT': 5432,
+        'CONN_MAX_AGE': 60,
     }
 }
 
