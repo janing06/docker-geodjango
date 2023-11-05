@@ -35,7 +35,50 @@
 
                console.log(data)
 
-               L.geoJson(data).addTo(map)
+               function style(feature) {
+                    return {
+                        fillColor: 'grey',
+                        weight: 2,
+                        opacity: 1,
+                        color: 'white',
+                        dashArray: '3',
+                        fillOpacity: 1
+                    };
+                }
+                
+                function highlightFeature(e) {
+                    var layer = e.target;
+                
+                    layer.setStyle({
+                        weight: 3,
+                        color: '#666',
+                        dashArray: '',
+                        fillOpacity: 1
+                    });
+                
+                    layer.bringToFront();
+
+                    var popupContent = `Barangay: ${layer.feature.properties.barangay}<br>Municipal: ${layer.feature.properties.municipal}<br>Code: ${layer.feature.properties.code}<br>Latidude: ${layer.feature.properties.latitude}<br>Longitude: ${layer.feature.properties.longitude}`;
+                    layer.bindPopup(popupContent).openPopup();
+                }
+
+                function resetHighlight(e) {
+                    geojson.resetStyle(e.target);
+                }
+
+               function onEachFeature(feature, layer) {
+                    layer.on({
+                         mouseover: highlightFeature,
+                         mouseout: resetHighlight,
+                         
+                    });
+               }
+
+
+               geojson = L.geoJson(data, {
+                    style: style,
+                    onEachFeature: onEachFeature
+               }).addTo(map)
           }
 
           
