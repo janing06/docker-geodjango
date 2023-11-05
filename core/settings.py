@@ -35,7 +35,8 @@ INSTALLED_APPS = [
     'api',
     'rest_framework_gis',
     'rest_framework',
-    'leaflet'
+    'leaflet',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -47,6 +48,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+
 ]
 
 STATIC_URL = '/static/'
