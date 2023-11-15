@@ -8,7 +8,6 @@ django-leaflet==0.29.0
 djangorestframework==3.14.0
 djangorestframework-gis==1.0
 environ==1.0
-GDAL==3.4.3
 gunicorn==21.2.0
 numpy==1.25.2
 packaging==23.1
