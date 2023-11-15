@@ -26,7 +26,7 @@ ALLOWED_HOSTS = ['docker-test-yb57.onrender.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'jazzmin',
+    # 'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
