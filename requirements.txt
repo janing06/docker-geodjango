@@ -16,3 +16,4 @@ typing_extensions==4.7.1
 tzdata==2023.3
 whitenoise==6.6.0
 django-cors-headers==4.3.0
+django-jazzmin==2.6.0
