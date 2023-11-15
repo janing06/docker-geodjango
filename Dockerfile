@@ -24,7 +24,6 @@ COPY ./requirements.txt /app/requirements.txt
 
 RUN pip install -r requirements.txt
 
-RUN python manage.py collectstatic
 # Copy over the project
 COPY . /app
 
